@@ -1,0 +1,90 @@
+html,
+body,
+#app {
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+#app {
+    display: flex;
+}
+
+#app > div.side {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+}
+
+#app > div.side > div.side-inner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    background-color: #dadada;
+}
+
+#app > div.side > div.side-inner > h2 {
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 30px;
+}
+
+#app > div.side > div.side-inner > div.output-wrapper,
+#app > div.side > div.side-inner > textarea {
+    border: none;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: white;
+    height: calc(85% - 62px);
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#app > div.side > div.side-inner > div.output-wrapper {
+    overflow: scroll;
+}
+
+#app > div.side > div.side-inner > div.output-wrapper > p > span {
+    white-space: pre;
+}
+
+#app > div.side > div.side-inner > div.output-wrapper > p > span.output-preError,
+#app > div.side > div.side-inner > div.output-wrapper > p > span.output-atError,
+#app > div.side > div.side-inner > div.output-wrapper > p > span.output-afterError {
+    color: red;
+}
+#app > div.side > div.side-inner > div.output-wrapper > p > span.output-atError {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#app > div.side > div.side-inner > textarea {
+    resize: none;
+}
+
+#app > div.side > div.side-inner > div.announce-log {
+    display: block;
+    width: 100%;
+    height: 15%;
+    background-color: black;
+}
+
+#app > div.side > div.side-inner > div.announce-log > p {
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+#app > div.side > div.side-inner > div.announce-log > p.error {
+    color: red;
+}
+
+#app > div.side > div.side-inner > div.announce-log > p.success {
+    color: green;
+}

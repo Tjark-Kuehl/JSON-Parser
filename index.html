@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JSON Parser</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <script src="./js/vue.min.js" defer></script>
+  <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Left -->
+    <div class="side">
+      <div class="side-inner">
+        <h2>Input</h2>
+        <textarea v-model="input"></textarea>
+      </div>
+    </div>
+    <!-- Right -->
+    <div class="side">
+      <div class="side-inner">
+        <h2>Output</h2>
+        <div class="output-wrapper">
+          <p>
+            <span v-for="part in output" :class="'output-' + part.type">{{part.text}}</span>
+          </p>
+        </div>
+        <div class="announce-log">
+          <p v-for="(val, key) in announce" :key="key" :class="val.error ? 'error' : 'success'">{{key}}:&nbsp;{{val.msg}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
